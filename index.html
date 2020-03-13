@@ -60,6 +60,18 @@
                 var color = colors[i];
 
                 renderData.push(<Circle key={i + color} bgColor={color} />);
+
+                /*
+                // Collecting multiple circles with React.createElement method.
+                renderData.push(
+                    React.createElement(Circle,
+                        {
+                            key: i + color,
+                            bgColor: color
+                        }
+                    )
+                )
+                */
             }
 
 
