@@ -42,8 +42,37 @@
                 }
             }
 
+            /*
+            function showCircle() {
+                var colors = ["#AD3E41", "#DF3941", "#41393E", "#913E34"];
+
+                var ran = Math.floor(Math.random()*colors.length);
+
+                // return a circle with random color
+                return <Circle bgColor={colors[ran]} />;
+            }
+            */
+
+            var colors = ["#AD3E41", "#DF3941", "#41393E", "#913E34"];
+            var renderData = [];
+
+            for (var i=0; i < colors.length; i++) {
+                var color = colors[i];
+
+                renderData.push(<Circle key={i + color} bgColor={color} />);
+            }
+
+
             ReactDOM.render(
-                <Circle bgColor="#F9C240" />,
+                //<Circle bgColor="#F9C240" />,
+                <div>
+                    { 
+                        // Showing random color Circle with this function
+                        /* showCircle() */ 
+
+                        renderData
+                    }
+                </div>,
                 destination
             )
         </script>
